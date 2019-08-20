@@ -1,13 +1,12 @@
 // test.cpp
 
 #include <iostream>
-
-using namespace std;
+#include "hello.hpp"
 
 int main(void) {
 
-     cout << "Hello World" << endl;
-
+     hello::save();
+     hello::load();
      return(0);
-
+     
 }

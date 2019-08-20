@@ -3,7 +3,8 @@
 
 namespace hello {
 
-void say_hello();
+void save();
+void load();
 
 }
 

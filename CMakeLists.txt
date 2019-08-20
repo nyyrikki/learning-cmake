@@ -1,16 +1,11 @@
 # Specify the minimum version for CMake
-cmake_minimum_required(VERSION 2.8)
+cmake_minimum_required(VERSION 3.15)
 
 # Project's name
 project(hello)
 
 add_subdirectory(say-hello)
-add_subdirectory(executable)
 
-function(do_cmake_good)
-    foreach(arg IN LISTS ARGN)
-        message("You called the messages with ${arg}")
-    endforeach()
-endfunction()
+add_executable(main main.cpp)
 
-do_cmake_good(Something is missing in our world !)
+target_link_libraries(main say-hello)
